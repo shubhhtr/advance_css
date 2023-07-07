@@ -1,0 +1,60 @@
+$grid-width: 114rem;
+$gutter-horizontal: 6rem;
+$gutter-vertical: 8rem;
+
+.row {
+	max-width: $grid-width;
+	//background-color: $color-primary;
+	margin: 0 auto;
+
+	&:not(:last-child) {
+		margin-bottom: $gutter-vertical;
+	}
+
+	//Height of the row remains 0px because all the content of this row is in float so height collapses. To make that right we use the ::after
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	//These properties will be applied to all the columns:
+	.col {
+		background-color: $color-primary-light;
+		float: left;
+
+		&:not(:last-child) {
+			margin-right: $gutter-horizontal;
+		}
+	}
+
+	.one-two {
+		width: calc((100% - #{$gutter-horizontal}) / 2);
+	}
+
+	.one-three {
+		width: calc((100% - #{$gutter-horizontal}* 2) / 3);
+	}
+
+	.two-three {
+		width: calc(
+			2 * ((100% - #{$gutter-horizontal}* 2) / 3) + #{$gutter-horizontal}
+		);
+	}
+
+	.one-four {
+		width: calc((100% - #{$gutter-horizontal}* 3) / 4);
+	}
+
+	.two-four {
+		width: calc(
+			((100% - #{$gutter-horizontal}* 3) / 4) * 2 + #{$gutter-horizontal}
+		);
+	}
+
+	.three-four {
+		width: calc(
+			((100% - #{$gutter-horizontal}* 3) / 4) * 3 + 2 *#{$gutter-horizontal}
+		);
+	}
+}
