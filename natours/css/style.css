@@ -67,6 +67,10 @@
   transform: scale(0.95);
 }
 
+.feature-box-text {
+  color: red;
+}
+
 *,
 *::after,
 *::before {
