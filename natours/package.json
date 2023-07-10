@@ -1,15 +1,16 @@
 {
-  "name": "natours",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^8.0.0"
-  }
+	"name": "natours",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"compile:sass": "node-sass sass/main.scss css/style.css -w",
+		"start": "sass --watch ./sass/main.scss ./css/style.css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"sass": "^1.63.6"
+	}
 }

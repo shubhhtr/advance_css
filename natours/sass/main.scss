@@ -1,10 +1,7 @@
-$color-primary: #ff4747;
-$color-primary-light: #ffad15;
-$color-primary-dark: #c72020;
-
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@import './abstract/variables';
+@import './base/utilities';
+@import './components/button';
+@import './components/composition';
 
 *,
 *::after,
@@ -199,3 +196,4 @@ body {
 }
 
 @import './pages/grid';
+@import './pages/home';
